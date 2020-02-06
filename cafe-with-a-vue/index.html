@@ -10,6 +10,7 @@
   <body>
     <div class="app">
       <h1>French Bakery</h1>
+      <h2 id="restTitle">{{restautantName}}</h2>
       <p class="description">
         Welcome to French Bakery! We are known for our freshly baked bread and
         french pastries! Give you morning a warm start or treat yourself in the
@@ -17,6 +18,15 @@
         Once you take your first bite, you will see why everyone can't get
         enough!
       </p>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script>
+        Const test = new Vue({
+          el:'#restTitle'
+          data:{
+              restautantName:'babouzy'
+        }
+        })
+      </script>
       <footer class="footer">
         <p>Copyright French Bakery 2019</p>
       </footer>
