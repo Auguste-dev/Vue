@@ -19,10 +19,10 @@
       </p>
 
       <h2>Contact Us</h2>
-      <p>Address: 9274 Beurre Ave, Paris, France</p>
-      <p>Phone: +08 88 88 88 88 88</p>
-      <p>Email: hello@cafewithavue.bakery</p>
-      <p>Hours:</p>
+      <p>{{Address}} </p>
+      <p>{{Phone}}</p>
+      <p>{{Email}}</p>
+      <p>{{Hours}}</p>
       <ul>
         <li>M-F: 06:00 to 16:00</li>
         <li>Saturday: 07:00 to 14:00</li>
@@ -30,7 +30,7 @@
       </ul>
 
       <footer class="footer">
-        <p>Copyright {{ restaurantName }} 2019</p>
+        <p>Copyright {{ result }} 2019</p>
       </footer>
     </div>
 
@@ -39,7 +39,16 @@
       const app = new Vue({
         el: '#app',
         data: {
-          restaurantName: 'French Bakery'
+          restaurantName: 'Cafe with a Vue',
+          Phone:+08 88 88 88 88 88,
+          Address:'9274 Beurre Ave, Paris, France',
+          Email: 'hello@cafewithavue.bakery'
+          
+          
+        },
+        computed:{
+          result:function(){
+          return this.restaurantName + this.phoneNumber + this.Email + this.Address}
         }
       })
     </script>
