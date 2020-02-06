@@ -30,7 +30,7 @@
       </ul>
 
       <footer class="footer">
-        <p>Copyright {{ restaurantName }} 2019</p>
+        <p>Copyright {{ result }} 2019</p>
       </footer>
     </div>
 
@@ -39,7 +39,14 @@
       const app = new Vue({
         el: '#app',
         data: {
-          restaurantName: 'French Bakery'
+          restaurantName: 'Cafe with a Vue',
+          phoneNumber:2290656265,
+          email:'test@gamil.com',
+          adress: 'Porto-Novo, bénin'
+        },
+        computed:{
+          result:function(){
+          return this.restaurantName + '<br/>' + this.phoneNumber + this.email + this.adress}
         }
       })
     </script>
